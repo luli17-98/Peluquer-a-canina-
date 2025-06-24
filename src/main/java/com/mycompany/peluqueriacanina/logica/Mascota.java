@@ -102,9 +102,10 @@ public class Mascota implements Serializable {
     }
 
     public Object getAtencion() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        String Atencion_especial = null;
+
+        this.atencion_especial= Atencion_especial;
+        return null;
     }
-    
-    
     
 }

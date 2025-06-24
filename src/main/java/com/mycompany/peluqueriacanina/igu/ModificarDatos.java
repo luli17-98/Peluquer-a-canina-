@@ -383,11 +383,11 @@ public class ModificarDatos extends javax.swing.JFrame {
           cmbAlergico.setSelectedIndex(2);    
         }
         
-        if(masco.getAtencion().equals("SI")){
+        if(masco.getAtencion_especial().equals("SI")){
         cmbAtencion.setSelectedIndex(1);         
         }
         else{
-         if(masco.getAtencion().equals("NO")){
+         if(masco.getAtencion_especial().equals("NO")){
           cmbAtencion.setSelectedIndex(2);   
         }
         
