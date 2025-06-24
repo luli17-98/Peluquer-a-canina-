@@ -2,17 +2,22 @@
 package com.mycompany.peluqueriacanina.igu;
 
 import com.mycompany.peluqueriacanina.logica.Controladora;
+import com.mycompany.peluqueriacanina.logica.Mascota;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 
-public class CargaDatos extends javax.swing.JFrame {
+public class ModificarDatos extends javax.swing.JFrame {
     
-    Controladora control = new Controladora();
+    Controladora control = null;
+    int num_cliente;
+    Mascota masco;
     
-    public CargaDatos() {
-        //control = new Controladora();
+    public ModificarDatos(int num_cliente) {
+       control = new Controladora();
+       this.num_cliente = num_cliente;
         
-        initComponents();
+       initComponents();
+       cargarDatos(num_cliente);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -60,7 +65,7 @@ public class CargaDatos extends javax.swing.JFrame {
 
         btnGuardar.setBackground(new java.awt.Color(0, 0, 0));
         btnGuardar.setFont(new java.awt.Font("Segoe UI Emoji", 1, 24)); // NOI18N
-        btnGuardar.setText("Guardar💾");
+        btnGuardar.setText("Guardar Cambios💾");
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGuardarActionPerformed(evt);
@@ -72,7 +77,7 @@ public class CargaDatos extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Bodoni MT Condensed", 3, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("CARGAR DATOS");
+        jLabel1.setText("MODIFICACIÓN DE DATOS");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -319,13 +324,16 @@ public class CargaDatos extends javax.swing.JFrame {
       String celduenio = txtCelDueño.getText();
       
               
-      control.guardar(nombreMascota,raza,color,Observ,alergico,atencionEspecial,nombreDuenio,celduenio);  
+      control.modificarMascota(masco,nombreMascota,raza,color,Observ,alergico,atencionEspecial,nombreDuenio,celduenio);  
       
-      JOptionPane optionPane = new JOptionPane("Se guardo Correctamente");
-      optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
-      JDialog dialog = optionPane.createDialog("Se guardo con Exito");
-      dialog.setAlwaysOnTop(true);
-      dialog.setVisible(true);
+      mostrarMensaje("Edicion Realizada Corretamente","Info","Edicion Correcta");
+      
+      VerDatos pantalla = new VerDatos();
+      pantalla.setVisible(true);
+      pantalla.setLocationRelativeTo(null);
+      
+      
+      this.dispose();
     }//GEN-LAST:event_btnGuardarActionPerformed
 
 
@@ -355,4 +363,48 @@ public class CargaDatos extends javax.swing.JFrame {
     private javax.swing.JTextArea txtObserv;
     private javax.swing.JTextField txtRaza;
     // End of variables declaration//GEN-END:variables
+
+    private void cargarDatos(int num_cliente) {
+        
+        this.masco = control.traerMascotas(num_cliente);
+        
+        txtNombre.setText(masco.getNombre());
+        txtRaza.setText(masco.getRaza());
+        txtColor.setText(masco.getColor());
+        txtNomDueño.setText(masco.getUnDuenio().getNombre());
+        txtCelDueño.setText(masco.getUnDuenio().getCelDuenio());
+        txtObserv.setText(masco.getObservaciones());
+        
+        if(masco.getAlergico().equals("SI")){
+          cmbAlergico.setSelectedIndex(1);  
+        }
+        else{
+            if(masco.getAlergico().equals("NO")){
+          cmbAlergico.setSelectedIndex(2);    
+        }
+        
+        if(masco.getAtencion().equals("SI")){
+        cmbAtencion.setSelectedIndex(1);         
+        }
+        else{
+         if(masco.getAtencion().equals("NO")){
+          cmbAtencion.setSelectedIndex(2);   
+        }
+        
+        } 
+        }}
+    public void mostrarMensaje (String mensaje,String tipo,String titulo){
+     JOptionPane optionPane = new JOptionPane(mensaje);
+     if (tipo.equals("info")){
+      optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+     }
+     else if(tipo.equals("Error")){
+         optionPane.setMessageType(JOptionPane.ERROR_MESSAGE);
+     }
+      JDialog dialog = optionPane.createDialog(titulo);
+      dialog.setAlwaysOnTop(true);
+      dialog.setVisible(true);     
+        
+    }
 }
+
