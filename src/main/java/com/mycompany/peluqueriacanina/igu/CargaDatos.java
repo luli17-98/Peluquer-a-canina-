@@ -4,6 +4,12 @@ package com.mycompany.peluqueriacanina.igu;
 import com.mycompany.peluqueriacanina.logica.Controladora;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.awt.Desktop;
+import java.io.File;
+
 
 public class CargaDatos extends javax.swing.JFrame {
     
@@ -321,11 +327,40 @@ public class CargaDatos extends javax.swing.JFrame {
               
       control.guardar(nombreMascota,raza,color,Observ,alergico,atencionEspecial,nombreDuenio,celduenio);  
       
+       try {
+        FileWriter writer = new FileWriter("registro_mascotas.txt", true); // Agrega al archivo
+          try (BufferedWriter bw = new BufferedWriter(writer)) {
+              bw.write("Mascota: " + nombreMascota +
+                      " | Raza: " + raza +
+                      " | Color: " + color +
+                      " | Alergico: " + alergico +
+                      " | Atención Especial: " + atencionEspecial +
+                      " | Dueño: " + nombreDuenio +
+                      " | Celular: " + celduenio +
+                      " | Observaciones: " + Observ);
+              bw.newLine();
+          }
+
+        System.out.println("Datos guardados también en archivo .txt");
+
+     File archivo = new File("registro_mascotas.txt");
+    if (archivo.exists()) {
+        Desktop.getDesktop().open(archivo);
+    } else {
+        System.out.println("El archivo no fue encontrado.");
+    }
+
+} catch (IOException e) {
+    System.out.println("Error al guardar o abrir el archivo .txt: " + e.getMessage());
+}
+      
       JOptionPane optionPane = new JOptionPane("Se guardo Correctamente");
       optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
       JDialog dialog = optionPane.createDialog("Se guardo con Exito");
       dialog.setAlwaysOnTop(true);
       dialog.setVisible(true);
+      
+      
     }//GEN-LAST:event_btnGuardarActionPerformed
 
 
