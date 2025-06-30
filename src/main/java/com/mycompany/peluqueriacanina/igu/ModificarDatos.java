@@ -44,9 +44,8 @@ public class ModificarDatos extends javax.swing.JFrame {
         txtCelDueño = new javax.swing.JTextField();
         txtRaza = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtObserv = new javax.swing.JTextArea();
+        fechaHora = new javax.swing.JLabel();
+        txtFechaH = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -146,15 +145,13 @@ public class ModificarDatos extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Cel Dueño:");
 
-        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel9.setText("Observaciones:");
+        fechaHora.setBackground(new java.awt.Color(255, 255, 255));
+        fechaHora.setForeground(new java.awt.Color(0, 0, 0));
+        fechaHora.setText("fecha-hora:");
 
-        txtObserv.setBackground(new java.awt.Color(204, 204, 204));
-        txtObserv.setColumns(20);
-        txtObserv.setRows(5);
-        txtObserv.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jScrollPane1.setViewportView(txtObserv);
+        txtFechaH.setBackground(new java.awt.Color(204, 204, 204));
+        txtFechaH.setForeground(new java.awt.Color(0, 0, 0));
+        txtFechaH.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -190,16 +187,13 @@ public class ModificarDatos extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(cmbAlergico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel8)
-                            .addComponent(jLabel7))
+                            .addComponent(jLabel7)
+                            .addComponent(fechaHora))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtFechaH, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtCelDueño, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtNomDueño, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(291, Short.MAX_VALUE))
@@ -235,11 +229,11 @@ public class ModificarDatos extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(txtCelDueño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fechaHora)
+                    .addComponent(txtFechaH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -307,7 +301,7 @@ public class ModificarDatos extends javax.swing.JFrame {
         txtColor.setText("");
         txtNomDueño.setText("");
         txtCelDueño.setText("");
-        txtObserv.setText("");
+        txtFechaH.setText("");
         cmbAlergico.setSelectedIndex(0);
         cmbAtencion.setSelectedIndex(0);
     }//GEN-LAST:event_btnLimpiarActionPerformed
@@ -316,7 +310,7 @@ public class ModificarDatos extends javax.swing.JFrame {
       String nombreMascota = txtNombre.getText();
       String raza = txtRaza.getText();
       String color = txtColor.getText();
-      String Observ = txtObserv.getText();
+      String Observ = txtFechaH.getText();
       String alergico = (String) cmbAlergico.getSelectedItem();
       String atencionEspecial = (String) cmbAtencion.getSelectedItem();
       
@@ -342,6 +336,7 @@ public class ModificarDatos extends javax.swing.JFrame {
     private javax.swing.JButton btnLimpiar;
     private javax.swing.JComboBox<String> cmbAlergico;
     private javax.swing.JComboBox<String> cmbAtencion;
+    private javax.swing.JLabel fechaHora;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -351,16 +346,14 @@ public class ModificarDatos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField txtCelDueño;
     private javax.swing.JTextField txtColor;
+    private javax.swing.JTextField txtFechaH;
     private javax.swing.JTextField txtNomDueño;
     private javax.swing.JTextField txtNombre;
-    private javax.swing.JTextArea txtObserv;
     private javax.swing.JTextField txtRaza;
     // End of variables declaration//GEN-END:variables
 
@@ -373,7 +366,7 @@ public class ModificarDatos extends javax.swing.JFrame {
         txtColor.setText(masco.getColor());
         txtNomDueño.setText(masco.getUnDuenio().getNombre());
         txtCelDueño.setText(masco.getUnDuenio().getCelDuenio());
-        txtObserv.setText(masco.getObservaciones());
+        txtFechaH.setText(masco.getfechaHora());
         
         if(masco.getAlergico().equals("SI")){
           cmbAlergico.setSelectedIndex(1);  

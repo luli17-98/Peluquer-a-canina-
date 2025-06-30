@@ -45,9 +45,8 @@ public class CargaDatos extends javax.swing.JFrame {
         txtCelDueño = new javax.swing.JTextField();
         txtRaza = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtObserv = new javax.swing.JTextArea();
+        fechaHora = new javax.swing.JLabel();
+        txtFechaH = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,8 +54,9 @@ public class CargaDatos extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\saslu\\Pictures\\Screenshots\\pet-grooming-washing-scissors-comb-260nw-2071310966.jpg")); // NOI18N
 
-        btnLimpiar.setBackground(new java.awt.Color(0, 0, 0));
+        btnLimpiar.setBackground(new java.awt.Color(255, 204, 102));
         btnLimpiar.setFont(new java.awt.Font("Segoe UI Emoji", 1, 24)); // NOI18N
+        btnLimpiar.setForeground(new java.awt.Color(0, 0, 0));
         btnLimpiar.setText("Limpiar🗑️");
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,8 +64,9 @@ public class CargaDatos extends javax.swing.JFrame {
             }
         });
 
-        btnGuardar.setBackground(new java.awt.Color(0, 0, 0));
+        btnGuardar.setBackground(new java.awt.Color(255, 204, 102));
         btnGuardar.setFont(new java.awt.Font("Segoe UI Emoji", 1, 24)); // NOI18N
+        btnGuardar.setForeground(new java.awt.Color(0, 0, 0));
         btnGuardar.setText("Guardar💾");
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,11 +74,11 @@ public class CargaDatos extends javax.swing.JFrame {
             }
         });
 
-        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.setBackground(new java.awt.Color(255, 204, 102));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
 
         jLabel1.setFont(new java.awt.Font("Bodoni MT Condensed", 3, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setForeground(new java.awt.Color(51, 51, 0));
         jLabel1.setText("CARGAR DATOS");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -97,7 +98,7 @@ public class CargaDatos extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setBackground(new java.awt.Color(255, 204, 102));
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
@@ -147,15 +148,13 @@ public class CargaDatos extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Cel Dueño:");
 
-        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel9.setText("Observaciones:");
+        fechaHora.setBackground(new java.awt.Color(255, 255, 255));
+        fechaHora.setForeground(new java.awt.Color(0, 0, 0));
+        fechaHora.setText("fecha-hora:");
 
-        txtObserv.setBackground(new java.awt.Color(204, 204, 204));
-        txtObserv.setColumns(20);
-        txtObserv.setRows(5);
-        txtObserv.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jScrollPane1.setViewportView(txtObserv);
+        txtFechaH.setBackground(new java.awt.Color(204, 204, 204));
+        txtFechaH.setForeground(new java.awt.Color(0, 0, 0));
+        txtFechaH.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -191,19 +190,18 @@ public class CargaDatos extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(cmbAlergico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel8)
-                            .addComponent(jLabel7))
+                            .addComponent(jLabel7)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(fechaHora)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtCelDueño, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNomDueño, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(291, Short.MAX_VALUE))
+                            .addComponent(txtNomDueño, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtFechaH, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(121, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -237,10 +235,10 @@ public class CargaDatos extends javax.swing.JFrame {
                     .addComponent(jLabel7)
                     .addComponent(txtCelDueño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fechaHora)
+                    .addComponent(txtFechaH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(132, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -250,7 +248,7 @@ public class CargaDatos extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(71, 71, 71))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -308,7 +306,7 @@ public class CargaDatos extends javax.swing.JFrame {
         txtColor.setText("");
         txtNomDueño.setText("");
         txtCelDueño.setText("");
-        txtObserv.setText("");
+        txtFechaH.setText("");
         cmbAlergico.setSelectedIndex(0);
         cmbAtencion.setSelectedIndex(0);
     }//GEN-LAST:event_btnLimpiarActionPerformed
@@ -317,7 +315,7 @@ public class CargaDatos extends javax.swing.JFrame {
       String nombreMascota = txtNombre.getText();
       String raza = txtRaza.getText();
       String color = txtColor.getText();
-      String Observ = txtObserv.getText();
+      String fechaHora = txtFechaH.getText();
       String alergico = (String) cmbAlergico.getSelectedItem();
       String atencionEspecial = (String) cmbAtencion.getSelectedItem();
       
@@ -325,7 +323,7 @@ public class CargaDatos extends javax.swing.JFrame {
       String celduenio = txtCelDueño.getText();
       
               
-      control.guardar(nombreMascota,raza,color,Observ,alergico,atencionEspecial,nombreDuenio,celduenio);  
+      control.guardar(nombreMascota,raza,color,fechaHora,alergico,atencionEspecial,nombreDuenio,celduenio);  
       
        try {
         FileWriter writer = new FileWriter("registro_mascotas.txt", true); // Agrega al archivo
@@ -337,7 +335,7 @@ public class CargaDatos extends javax.swing.JFrame {
                       " | Atención Especial: " + atencionEspecial +
                       " | Dueño: " + nombreDuenio +
                       " | Celular: " + celduenio +
-                      " | Observaciones: " + Observ);
+                      " | Fecha-Hora: " + fechaHora);
               bw.newLine();
           }
 
@@ -369,6 +367,7 @@ public class CargaDatos extends javax.swing.JFrame {
     private javax.swing.JButton btnLimpiar;
     private javax.swing.JComboBox<String> cmbAlergico;
     private javax.swing.JComboBox<String> cmbAtencion;
+    private javax.swing.JLabel fechaHora;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -378,16 +377,14 @@ public class CargaDatos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField txtCelDueño;
     private javax.swing.JTextField txtColor;
+    private javax.swing.JTextField txtFechaH;
     private javax.swing.JTextField txtNomDueño;
     private javax.swing.JTextField txtNombre;
-    private javax.swing.JTextArea txtObserv;
     private javax.swing.JTextField txtRaza;
     // End of variables declaration//GEN-END:variables
 }

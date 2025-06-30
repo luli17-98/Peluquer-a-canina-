@@ -1,6 +1,7 @@
 
 package com.mycompany.peluqueriacanina.logica;
 
+
 import com.mycompany.peluqueriacanina.persistencia.ControladoraPersistencia;
 import java.util.List;
 
@@ -20,7 +21,7 @@ public class Controladora {
         masco.setColor(color);
         masco.setAlergico(alergico);
         masco.setAtencion_especial(atencionEspecial);
-        masco.setObservaciones(Observ);
+        masco.setfechaHora("");
         masco.setUnDuenio(duenio);
         
         controlPersis.guardar(duenio,masco);
@@ -49,7 +50,7 @@ public class Controladora {
         masco.setNombre(nombreMascota);
         masco.setRaza(raza);
         masco.setColor(color);
-        masco.setObservaciones(Observ);
+        masco.setfechaHora(fechaHora);
         masco.setAtencion_especial(atencionEspecial);
         masco.setAlergico(alergico);
         

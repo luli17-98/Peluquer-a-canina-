@@ -32,8 +32,9 @@ public class Principal extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setBackground(new java.awt.Color(255, 204, 102));
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("cargar datos");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -41,8 +42,9 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        VerDatos.setBackground(new java.awt.Color(255, 255, 255));
+        VerDatos.setBackground(new java.awt.Color(255, 153, 153));
         VerDatos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        VerDatos.setForeground(new java.awt.Color(0, 0, 0));
         VerDatos.setText("Ver Datos");
         VerDatos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,9 +52,15 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        btnSalir.setBackground(new java.awt.Color(255, 255, 255));
+        btnSalir.setBackground(new java.awt.Color(255, 204, 102));
         btnSalir.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnSalir.setForeground(new java.awt.Color(0, 0, 0));
         btnSalir.setText("Salir");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -142,6 +150,10 @@ public class Principal extends javax.swing.JFrame {
      pantalla.setLocationRelativeTo(null);
      
     }//GEN-LAST:event_VerDatosActionPerformed
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_btnSalirActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton VerDatos;

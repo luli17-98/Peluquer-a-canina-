@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.metamodel.SingularAttribute;
 
 @Entity
 public class Mascota implements Serializable {
@@ -19,21 +20,21 @@ public class Mascota implements Serializable {
     private String color;
     private String alergico;
     private String atencion_especial;
-    private String observaciones;
+    private String fechaHora;
     @OneToOne
     private Duenio unDuenio;
 
     public Mascota() {
     }
 
-    public Mascota(int num_cliente, String nombre, String raza, String color, String alergico, String atencion_especial, String observaciones, Duenio unDuenio) {
+    public Mascota(int num_cliente, String nombre, String raza, String color, String alergico, String atencion_especial, String fechaHora, Duenio unDuenio) {
         this.num_cliente = num_cliente;
         this.nombre = nombre;
         this.raza = raza;
         this.color = color;
         this.alergico = alergico;
         this.atencion_especial = atencion_especial;
-        this.observaciones = observaciones;
+        this.fechaHora = fechaHora;
         this.unDuenio = unDuenio;
     }
 
@@ -85,13 +86,13 @@ public class Mascota implements Serializable {
         this.atencion_especial = atencion_especial;
     }
 
-    public String getObservaciones() {
-        return observaciones;
+    public String getfechaHora() {
+        return fechaHora;
     }
 
-    public void setObservaciones(String observaciones) {
-        this.observaciones = observaciones;
-    }
+   public void setfechaHora(String fechaHora) {
+    this.fechaHora = fechaHora;
+}
 
     public Duenio getUnDuenio() {
         return unDuenio;
@@ -107,5 +108,6 @@ public class Mascota implements Serializable {
         this.atencion_especial= Atencion_especial;
         return null;
     }
+
     
 }

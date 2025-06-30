@@ -12,3 +12,4 @@ public class PeluqueriaCanina {
         pantalla.setLocationRelativeTo(null);
     }
 }
+
