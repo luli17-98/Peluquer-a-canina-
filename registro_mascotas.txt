@@ -10,3 +10,4 @@ Mascota: gdsjjas | Raza:  | Color:  | Alergico: - | Atención Especial: - | Dueño
 Mascota: teo | Raza:  | Color:  | Alergico: - | Atención Especial: - | Dueño:  | Celular:  | Fecha-Hora: 17-5 14hs
 Mascota: perriito | Raza:  | Color:  | Alergico: - | Atención Especial: - | Dueño:  | Celular:  | Fecha-Hora: 3-5-25 14hs
 Mascota: hola | Raza:  | Color:  | Alergico: - | Atención Especial: - | Dueño:  | Celular:  | Fecha-Hora: 12-4 14hs
+Mascota: tai | Raza: salchicha | Color: marron | Alergico: SI | Atención Especial: NO | Dueño: luciana | Celular: 276554672 | Fecha-Hora: 28-5 17 hs

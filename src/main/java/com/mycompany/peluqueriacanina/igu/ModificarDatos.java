@@ -53,8 +53,9 @@ public class ModificarDatos extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\saslu\\Pictures\\Screenshots\\pet-grooming-washing-scissors-comb-260nw-2071310966.jpg")); // NOI18N
 
-        btnLimpiar.setBackground(new java.awt.Color(0, 0, 0));
+        btnLimpiar.setBackground(new java.awt.Color(255, 204, 102));
         btnLimpiar.setFont(new java.awt.Font("Segoe UI Emoji", 1, 24)); // NOI18N
+        btnLimpiar.setForeground(new java.awt.Color(0, 0, 0));
         btnLimpiar.setText("Limpiar🗑️");
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,8 +63,9 @@ public class ModificarDatos extends javax.swing.JFrame {
             }
         });
 
-        btnGuardar.setBackground(new java.awt.Color(0, 0, 0));
+        btnGuardar.setBackground(new java.awt.Color(255, 204, 102));
         btnGuardar.setFont(new java.awt.Font("Segoe UI Emoji", 1, 24)); // NOI18N
+        btnGuardar.setForeground(new java.awt.Color(0, 0, 0));
         btnGuardar.setText("Guardar Cambios💾");
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,8 +73,9 @@ public class ModificarDatos extends javax.swing.JFrame {
             }
         });
 
-        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.setBackground(new java.awt.Color(255, 204, 153));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
+        jPanel2.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel1.setFont(new java.awt.Font("Bodoni MT Condensed", 3, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -95,8 +98,9 @@ public class ModificarDatos extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setBackground(new java.awt.Color(255, 204, 102));
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel4.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));

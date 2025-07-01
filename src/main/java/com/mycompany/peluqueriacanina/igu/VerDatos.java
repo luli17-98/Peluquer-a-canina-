@@ -28,6 +28,7 @@ public class VerDatos extends javax.swing.JFrame {
         tablaMascotas = new javax.swing.JTable();
         btnEliminar = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -37,8 +38,7 @@ public class VerDatos extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setPreferredSize(null);
-
+        jLabel1.setBackground(new java.awt.Color(255, 204, 102));
         jLabel1.setFont(new java.awt.Font("Bodoni MT Condensed", 3, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("VISUALIZACIÓN DE DATOS");
@@ -57,7 +57,9 @@ public class VerDatos extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tablaMascotas);
 
+        btnEliminar.setBackground(new java.awt.Color(255, 204, 102));
         btnEliminar.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
+        btnEliminar.setForeground(new java.awt.Color(0, 0, 0));
         btnEliminar.setText("🗑️Eliminar");
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,11 +67,23 @@ public class VerDatos extends javax.swing.JFrame {
             }
         });
 
+        btnEditar.setBackground(new java.awt.Color(255, 204, 102));
         btnEditar.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
+        btnEditar.setForeground(new java.awt.Color(0, 0, 0));
         btnEditar.setText("✍Editar");
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarActionPerformed(evt);
+            }
+        });
+
+        jButton1.setBackground(new java.awt.Color(255, 204, 102));
+        jButton1.setFont(new java.awt.Font("Segoe UI Emoji", 1, 24)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
+        jButton1.setText("🔚");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -78,11 +92,13 @@ public class VerDatos extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(60, 60, 60)
+                .addGap(97, 97, 97)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(84, 84, 84)
                 .addComponent(btnEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
-                .addGap(159, 159, 159)
+                .addGap(44, 44, 44)
                 .addComponent(btnEditar, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
-                .addGap(250, 250, 250))
+                .addGap(112, 112, 112))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1)
@@ -92,11 +108,13 @@ public class VerDatos extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEliminar)
-                    .addComponent(btnEditar)))
+                    .addComponent(btnEditar)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabel2.setText("DATOS DE MASCOTAS:");
@@ -128,7 +146,7 @@ public class VerDatos extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(6, 6, 6))
         );
 
@@ -197,6 +215,13 @@ public class VerDatos extends javax.swing.JFrame {
     }   
    
     }//GEN-LAST:event_btnEditarActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Principal princ = new Principal();
+        princ.setVisible(true);
+        princ.setLocationRelativeTo(null);
+        this.dispose(); // Cierra la ventana actual
+    }//GEN-LAST:event_jButton1ActionPerformed
    
     public void mostrarMensaje (String mensaje,String tipo,String titulo){
      JOptionPane optionPane = new JOptionPane(mensaje);
@@ -215,6 +240,7 @@ public class VerDatos extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnEliminar;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
