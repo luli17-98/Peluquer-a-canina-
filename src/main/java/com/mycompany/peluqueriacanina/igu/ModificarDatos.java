@@ -310,7 +310,7 @@ public class ModificarDatos extends javax.swing.JFrame {
       String nombreMascota = txtNombre.getText();
       String raza = txtRaza.getText();
       String color = txtColor.getText();
-      String Observ = txtFechaH.getText();
+      String fechaHora = txtFechaH.getText();
       String alergico = (String) cmbAlergico.getSelectedItem();
       String atencionEspecial = (String) cmbAtencion.getSelectedItem();
       
@@ -318,7 +318,7 @@ public class ModificarDatos extends javax.swing.JFrame {
       String celduenio = txtCelDueño.getText();
       
               
-      control.modificarMascota(masco,nombreMascota,raza,color,Observ,alergico,atencionEspecial,nombreDuenio,celduenio);  
+      control.modificarMascota(masco,nombreMascota,raza,color,fechaHora,alergico,atencionEspecial,nombreDuenio,celduenio);  
       
       mostrarMensaje("Edicion Realizada Corretamente","Info","Edicion Correcta");
       

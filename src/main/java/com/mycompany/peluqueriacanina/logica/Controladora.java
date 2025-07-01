@@ -2,6 +2,7 @@
 package com.mycompany.peluqueriacanina.logica;
 
 
+
 import com.mycompany.peluqueriacanina.persistencia.ControladoraPersistencia;
 import java.util.List;
 
@@ -9,7 +10,7 @@ public class Controladora {
     
     ControladoraPersistencia controlPersis = new ControladoraPersistencia();
 
-    public void guardar(String nombreMascota, String raza, String color, String Observ, String alergico, String atencionEspecial, String nombreDuenio, String celduenio) {
+    public void guardar(String nombreMascota, String raza, String color, String fechaHora, String alergico, String atencionEspecial, String nombreDuenio, String celduenio) {
         
         Duenio duenio = new Duenio();
         duenio.setNombre(nombreDuenio);
@@ -21,7 +22,7 @@ public class Controladora {
         masco.setColor(color);
         masco.setAlergico(alergico);
         masco.setAtencion_especial(atencionEspecial);
-        masco.setfechaHora("");
+        masco.setfechaHora(fechaHora);
         masco.setUnDuenio(duenio);
         
         controlPersis.guardar(duenio,masco);
@@ -46,7 +47,7 @@ public class Controladora {
 
     }
 
-    public void modificarMascota(Mascota masco, String nombreMascota, String raza, String color, String Observ, String alergico, String atencionEspecial, String nombreDuenio, String celduenio) {
+    public void modificarMascota(Mascota masco, String nombreMascota, String raza, String color, String fechaHora, String alergico, String atencionEspecial, String nombreDuenio, String celduenio) {
         masco.setNombre(nombreMascota);
         masco.setRaza(raza);
         masco.setColor(color);
